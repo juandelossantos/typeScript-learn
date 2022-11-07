@@ -168,3 +168,5 @@ console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // watcher
+
+console.log("casa");
