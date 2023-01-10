@@ -2,22 +2,22 @@
 
 import { workerData } from "worker_threads";
 
-var nombre: string = "David";
+var nombre1: string = "David";
 // console.log("Hola " + nombre);
 // console.log(`Hola ${nombre}`); // Template string
 
-const PI: number = 3.1416;
+const PI1: number = 3.1416;
 
-let listaTareas: string[] = ["Tarea 1", "Tarea 2"];
-let valores: (string | number | boolean)[] = [false, "Hola", true, 56];
+let listaTareas1: string[] = ["Tarea 1", "Tarea 2"];
+let valores1: (string | number | boolean)[] = [false, "Hola", true, 56];
 
 enum Estados {
-  "Completado",
-  "Incompleto",
-  "Pendiente",
+  "Completado1",
+  "Incompleto1",
+  "Pendiente1",
 }
 
-let estadoTareas: Estados = Estados.Completado;
+let estadoTareas1: Estados = Estados.Completado;
 // console.log(estadoTareas);
 
 interface Tarea {
@@ -26,40 +26,40 @@ interface Tarea {
   urgencia: number;
 }
 
-let tarea1: Tarea = {
-  nombre: "Tarea 1",
+let tarea1a: Tarea = {
+  nombre: "Tarea 1a",
   estado: Estados.Pendiente,
   urgencia: 10,
 };
 
 // console.log(`Tarea: ${tarea1.nombre}`);
 
-type Producto = {
+type Producto1 = {
   precio: number;
   nombre: string;
 };
 
-let carro: Producto = {
+let carro1: Producto1 = {
   nombre: "Audi",
   precio: 43000000,
 };
 
-// console.log(`Producto: ${carro.nombre}`);
+console.log(`Producto: ${carro1.nombre}`);
 
 // Funciones
 
-function saludar() {
+function saludar1() {
   console.log("Hola Mundo");
 }
 /**
  * Función que muestra uns saludo por consola
  * @param nombre  Nombre de la persona
  */
-function saludarPersona(nombre: string) {
+function saludarPersona1(nombre: string) {
   console.log(`Hola ${nombre}`);
 }
 
-saludarPersona("David");
+saludarPersona1("David");
 
 /**
  * Función para despedir persona por consola
@@ -78,13 +78,36 @@ despedirPersona("David");
  * @param apellidos
  * @returns Cadena de texto con los parametros concatenados
  */
+function ejemploReturn1(nombre: string, apellidos: string): string {
+  return `${nombre} ${apellidos}`;
+}
+
+const nombreCompleto1 = ejemploReturn1("David", "Sierra");
+
+console.log(nombreCompleto1);
+
+console.log("casa");
+
 function ejemploReturn(nombre: string, apellidos: string): string {
   return `${nombre} ${apellidos}`;
 }
 
-const nombreCompleto = ejemploReturn("David", "Sierra");
+const nombreCompleto = ejemploReturn("Carmen Sofía", "Sierra Marciales");
 
 console.log(nombreCompleto);
+
+/**
+ * muestra por consola los nombres de un array dado.
+ * @param nombres es un array de nombres
+ */
+function ejemploMultipleParams(...nombres: string[]) {
+  nombres.forEach((nombre) => {
+    console.log(nombre);
+  });
+}
+
+ejemploMultipleParams("david", "emilio", "sierra", "puentes");
+ejemploMultipleParams("Sandra", "Sofía");
 
 // Arrow Functions
 
@@ -168,94 +191,3 @@ console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // worker
 console.log(`saga: ${generatorSaga.next().value}`); // watcher
-
-console.log("casa");
-
-// Declaración de variables
-
-let nombre: string = "David";
-console.log("Hola " + nombre);
-console.log(`Hola ${nombre}`); // Template string
-
-const PI: number = 3.1416;
-
-let listaTareas: string[] = ["Tarea 1", "Tarea 2"];
-let valores: (string | number | boolean)[] = [false, "Hola", true, 56];
-
-enum Estados {
-  "Completado",
-  "Incompleto",
-  "Pendiente",
-}
-
-let estadoTareas: Estados = Estados.Completado;
-console.log(estadoTareas);
-
-interface Tarea {
-  nombre: string;
-  estado: Estados;
-  urgencia: number;
-}
-
-let tarea1: Tarea = {
-  nombre: "Tarea 1",
-  estado: Estados.Pendiente,
-  urgencia: 10,
-};
-
-console.log(`Tarea: ${tarea1.nombre}`);
-
-type Producto = {
-  precio: number;
-  nombre: string;
-};
-
-let carro: Producto = {
-  nombre: "Audi",
-  precio: 43000000,
-};
-
-console.log(`Producto: ${carro.nombre}`);
-
-// Funciones
-
-function saludar() {
-  console.log("Hola Mundo");
-}
-
-/**
- * Función que muestra uns saludo por consola
- * @param nombre  Nombre de la persona
- */
-function saludarPersona(nombre: string) {
-  console.log(`Hola ${nombre}`);
-}
-
-saludarPersona("David");
-
-function casa(nombre: number) {
-  console.log(nombre);
-}
-
-casa(22);
-
-function ejemploReturn(nombre: string, apellidos: string): string {
-  return `${nombre} ${apellidos}`;
-}
-
-const nombreCompleto = ejemploReturn("Carmen Sofía", "Sierra Marciales");
-
-console.log(nombreCompleto);
-
-/**
- * muestra por consola los nombres de un array dado.
- * @param nombres es un array de nombres
- */
-function ejemploMultipleParams(...nombres: string[]) {
-  nombres.forEach((nombre) => {
-    console.log(nombre);
-  });
-}
-
-ejemploMultipleParams("david", "emilio", "sierra", "puentes");
-ejemploMultipleParams("Sandra", "Sofía");
