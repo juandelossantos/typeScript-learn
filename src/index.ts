@@ -17,7 +17,7 @@ enum Estados {
   "Pendiente1",
 }
 
-let estadoTareas1: Estados = Estados.Completado;
+let estadoTareas1: Estados = Estados.Completado1;
 // console.log(estadoTareas);
 
 interface Tarea {
@@ -28,7 +28,7 @@ interface Tarea {
 
 let tarea1a: Tarea = {
   nombre: "Tarea 1a",
-  estado: Estados.Pendiente,
+  estado: Estados.Pendiente1,
   urgencia: 10,
 };
 
