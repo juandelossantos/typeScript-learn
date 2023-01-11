@@ -135,7 +135,7 @@ console.log(mostrarEmpleado(empleado));
 const tareaDemorada = () => {
   setTimeout(() => {
     console.log("tarea en proceso...");
-  }, 3000);
+  }, 1);
 };
 
 async function ejemploAsync(): Promise<string> {
