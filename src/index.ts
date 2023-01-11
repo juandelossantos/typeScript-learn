@@ -109,7 +109,7 @@ function ejemploMultipleParams(...nombres: string[]) {
 ejemploMultipleParams("david", "emilio", "sierra", "puentes");
 ejemploMultipleParams("Sandra", "Sofía");
 
-// Arrow Functions
+// creación de un tipo de variable personalizado.
 
 type Empleado = {
   nombre: string;
@@ -123,6 +123,8 @@ let empleado: Empleado = {
   edad: 43,
 };
 
+// Arrow Functions
+
 const mostrarEmpleado = (empleado: Empleado): string =>
   `${empleado.nombre} ${empleado.apellido} ${empleado.edad}`;
 
@@ -133,7 +135,7 @@ console.log(mostrarEmpleado(empleado));
 const tareaDemorada = () => {
   setTimeout(() => {
     console.log("tarea en proceso...");
-  }, 300);
+  }, 3000);
 };
 
 async function ejemploAsync(): Promise<string> {
